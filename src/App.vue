@@ -1,14 +1,24 @@
 <template>
   <div id="app">
-    <dh-button disabled :loading="loading1" icon="settings" @click="loading1 = !loading1">按钮</dh-button>
-    <dh-button :loading="loading2" icon="settings" icon-position="right" @click="loading2 = !loading2">按钮</dh-button>
-    <dh-button :loading="loading3" @click="loading3 = !loading3">按钮</dh-button>
 
-    <dh-button-group>
-      <dh-button icon="left">上一页</dh-button>
-      <dh-button>更多</dh-button>
-      <dh-button icon="right" icon-position="right">下一页</dh-button>
-    </dh-button-group>
+    <div class="box">
+      <gl-input value="输入框"></gl-input>
+      <gl-input value="输入框" readonly></gl-input>
+      <gl-input value="输入框" disabled></gl-input>
+      <gl-input value="" error="姓名不能为空"></gl-input>
+    </div>
+
+    <div class="box">
+      <gl-button disabled :loading="loading1" icon="settings" @click="loading1 = !loading1">按钮</gl-button>
+      <gl-button :loading="loading2" icon="settings" icon-position="right" @click="loading2 = !loading2">按钮</gl-button>
+      <gl-button :loading="loading3" @click="loading3 = !loading3">按钮</gl-button>
+
+      <gl-button-group>
+        <gl-button icon="left">上一页</gl-button>
+        <gl-button>更多</gl-button>
+        <gl-button icon="right" icon-position="right">下一页</gl-button>
+      </gl-button-group>
+    </div>
   </div>
 </template>
 
@@ -31,20 +41,13 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-:root {
-  --button-height: 32px;
-  --font-size: 14px;
-  --button-bg: #fff;
-  --button-active-bg: #eee;
-  --border-radius: 4px;
-  --color: #999;
-  --border-color: #999;
-  --border-color-hover: #666;
-}
 #app {
   margin: 20px;
 }
 body {
-  font-size: var(--font-size);
+  font-size: 12px;
+}
+.box {
+  margin: 20px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <svg class="dh-icon">
+  <svg class="gl-icon">
     <use :xlink:href="`#i-${name}`"></use>
   </svg>
 </template>
@@ -8,7 +8,7 @@
 import "./svg-logo";
 
 export default {
-  name: "dh-icon",
+  name: "gl-icon",
   props: {
     name: {
       type: String
@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style lang="scss">
-.dh-icon {
+.gl-icon {
   width: 1em;
   height: 1em;
 }

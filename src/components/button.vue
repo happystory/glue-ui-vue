@@ -1,7 +1,7 @@
 <template>
-  <button class="dh-button" :disabled="disabled" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
-    <dh-icon v-if="icon && !loading" :name="icon" class="icon"></dh-icon>
-    <dh-icon v-if="loading" name="loading" class="loading icon"></dh-icon>
+  <button class="gl-button" :disabled="disabled" :class="{ [`icon-${iconPosition}`]: true }" @click="$emit('click')">
+    <gl-icon v-if="icon && !loading" :name="icon" class="icon"></gl-icon>
+    <gl-icon v-if="loading" name="loading" class="loading icon"></gl-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -12,9 +12,9 @@
 import Icon from "./icon.vue";
 
 export default {
-  name: "dh-button",
+  name: "gl-button",
   components: {
-    "dh-icon": Icon
+    "gl-icon": Icon
   },
   props: {
     icon: {
@@ -39,6 +39,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "./styles/vars.scss";
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -47,23 +49,23 @@ export default {
     transform: rotate(360deg);
   }
 }
-.dh-button {
-  font-size: var(--font-size);
-  height: var(--button-height);
+.gl-button {
+  font-size: $font-size;
+  height: $button-height;
   padding: 0 1em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-  background: var(--button-bg);
+  border-radius: $border-radius;
+  border: 1px solid $border-color;
+  background: $button-bg;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   vertical-align: middle;
   cursor: pointer;
   &:hover {
-    border-color: var(--border-color-hover);
+    border-color: $border-color-hover;
   }
   &:active {
-    background-color: var(--button-active-bg);
+    background-color: $button-active-bg;
   }
   &:focus {
     outline: none;
@@ -73,7 +75,7 @@ export default {
     cursor: not-allowed;
     &:hover {
       background: #f5f5f5;
-      border-color: var(--border-color);
+      border-color: $border-color;
     }
   }
 
