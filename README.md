@@ -1,34 +1,18 @@
 # glue-ui-vue
 
-## Project setup
+## 安装
+
 ```
-yarn install
+yarn add glue-ui-vue
 ```
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## 使用
 
-### Compiles and minifies for production
 ```
-yarn run build
-```
+import { Button, Input, Icon } from "glue-ui-vue";
+import "glue-ui-vue/dist/glue-ui-vue.css";
 
-### Run your tests
+Vue.component(Button.name, Button);
+Vue.component(Input.name, Input);
+Vue.component(Icon.name, Icon);
 ```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
