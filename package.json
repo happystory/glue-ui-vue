@@ -1,12 +1,12 @@
 {
   "name": "glue-ui-vue",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "main": "dist/glue-ui-vue.common.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "start": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name glue-ui-vue ./src/lib-entry.js",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test": "vue-cli-service test:unit"
   },
   "dependencies": {
     "vue": "^2.6.6"
