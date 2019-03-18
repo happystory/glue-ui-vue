@@ -1,6 +1,6 @@
 {
   "name": "glue-ui-vue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/glue-ui-vue.common.js",
   "license": "MIT",
   "scripts": {
