@@ -2,7 +2,8 @@
   <div id="app">
 
     <div class="box">
-      <gl-input value="输入框"></gl-input>
+      <gl-input v-model="msg" @change="handleInput"></gl-input>
+      <p @click="msg += '!'">{{msg}}</p>
       <gl-input value="输入框" readonly></gl-input>
       <gl-input value="输入框" disabled></gl-input>
       <gl-input value="" error="姓名不能为空"></gl-input>
@@ -29,8 +30,14 @@ export default {
     return {
       loading1: false,
       loading2: true,
-      loading3: false
+      loading3: false,
+      msg: "hi"
     };
+  },
+  methods: {
+    handleInput(e) {
+      console.log(e.target.value);
+    }
   }
 };
 </script>

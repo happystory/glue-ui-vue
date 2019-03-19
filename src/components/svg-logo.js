@@ -1,3 +1,4 @@
+/* eslint-disable */
 !(function(c) {
   var t,
     n =
@@ -12,7 +13,7 @@
         '<style>.svgfont {display: inline-block;width: 1em;height: 1em;fill: currentColor;vertical-align: -0.1em;font-size:16px;}</style>'
       );
     } catch (t) {
-      console && console.log(t);
+      // console && console.log(t);
     }
   }
   !(function(t) {
